@@ -1,0 +1,35 @@
+use datatest;
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://thumbs.dreamstime.com/b/cognitive-computing-concept-as-modern-technology-133615775.jpg",
+ "Pham hong Thien", "I will clean data for u","Data Scientist", "PhD of Data Sience", "4000", "Actual Expert!!", "849392992", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/OIP.pFqcVa-wLxxMp2ytf2ZhzgHaFY?w=266&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+ "John", "I will create a website for you","Web Developer", "BS of Software Engineer", "2500", "I have over 10 years experience on this major", "843221332", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/R.3805119c835a9cc3a980a3965ad4de39?rik=CoNq%2fPpw9LSElQ&pid=ImgRaw&r=0",
+ "Yoshimada Akira", "I'll will make your mobile applications","Mobile Developer", "BS of Software Engineer", "5000", "I can do any app just pick", "88888888", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/OIP.l-7ci-qyVMc6vvCMlOHBQQHaEo?pid=ImgDet&rs=1",
+ "Anonymous", "I will hack anything for you","Cyber Security", "BS of Cyber Security", "9999", "Actual back hat hacker, Real", "841111111", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/OIP.yepp5a2Kdr5V2hoDer9kSgHaFj?pid=ImgDet&rs=1",
+ "Snape", "I will teach you MAGIC!!","MAGE", "HogWarts Professor", "9999", "Believe Me", "849999999", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/OIP.rPI-lJ3oThPgpmD9_xZ48wHaHa?pid=ImgDet&rs=1",
+ "Johnny Sins", "I can do anythings for u","JACK of all Trade", "None", "69", "Try me", "6969696969", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/OIP.lAikLpNp7a0J03O8WMUdKwHaEK?pid=ImgDet&rs=1",
+ "John Wick", "I'll kill anyone for you","Hitman", "Hitman", "1111", "Touch my dog and u loose your life", "844444444", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into services (userName, imgURL, fullName, title, major, certificate, salaryExpectation, description, contact, createdAt, updatedAt) value ("naruuchi", 
+"https://th.bing.com/th/id/R.6479949253c19dd1238cb02fdc9d75fb?rik=SMGoxVHrzmeOBg&pid=ImgRaw&r=0",
+ "Mikami Yua", "Anythings u ask for honey","Singer, Actress", "No need", "0", "Anythings u ask for honey", "69696969669", "2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+
