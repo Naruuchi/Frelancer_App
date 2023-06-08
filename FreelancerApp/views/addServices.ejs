@@ -1,0 +1,118 @@
+<%- include('./includes/header')%>
+    <link rel="stylesheet" href="/services.css">
+    </head>
+
+    <body>
+        <%- include('./includes/navigation')%>
+            <% if (editMode == true ) { %>
+                <form action="/editSave" method="POST">
+                    <table align="center" class="addservice__table">
+                        <tr>
+                            <td class="addservice__td">
+                                <b>Update Your New Services</b>
+                            </td>
+                        </tr>
+                        <input type="number" name="id" value="<%= id %>" style="display: none; pointer-events: none;">
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="image"><b>Profile Image: </b></label> <input type="text" name="image" id="image" value="<%= imgUrl %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="title"><b>Title: </b></label> <input type="text" name="title" id="title" value="<%= title %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="major"><b>Major: </b></label> <input type="text" name="major" id="major" value="<%= major  %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="certificate"><b>Certificate: </b></label> <input type="text" name="certificate" id="certificate" value="<%= certificate %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="salary"><b>Salary Expectation: </b></label><input type="number" name="salary"
+                                id="salary" step="0.001" value="<%= salary %>">
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="addservice__td">
+                            <label for="contact"><b>Contact: </b></label> <input type="text" name="contact" id="contact" value="<%= contact %>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="addservice__td">
+                            <label for="description"><b>Description: </b></label><br>
+                            <textarea name="description" id="description" cols="45" rows="5"
+                            id="description" ><%= description %></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="addservice__td">
+                            <button type="submit" class="addservices__btn
+                            ">Update</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <% } else { %>
+                <form action="/add" method="POST">
+                    <table align="center" class="addservice__table">
+                        <tr>
+                            <td class="addservice__td">
+                                <b>Post Your New Services</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="image"><b>Profile Image: </b></label> <input type="text" name="image" id="image" placeholder="Link your profile image">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="title"><b>Title: </b></label> <input type="text" name="title" id="title" placeholder="I will collect, clean data for you ...etc.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="major"><b>Major: </b></label> <input type="text" name="major" id="major" placeholder="Data Scientist, ...etc.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="certificate"><b>Certificate: </b></label> <input type="text" name="certificate" id="certificate" placeholder="PhD of Data science, ...etc.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="salary"><b>Salary Expectation: </b></label><input type="number" name="salary"
+                                id="salary" step="0.001" placeholder="(in $) 3000 , ..etc.">
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="addservice__td">
+                            <label for="contact"><b>Contact: </b></label> <input type="text" name="contact" id="contact" placeholder="Number / Landing Page url">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="addservice__td">
+                            <label for="description" ><b>Description: </b></label><br>
+                            <textarea name="description" id="description" cols="45" rows="5"
+                            id="description" placeholder="Something about yourself"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="addservice__td">
+                            <button type="submit" class="addservices__btn
+                            ">POST</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <% } %>
+            
+            <%- include('./includes/footer')%>

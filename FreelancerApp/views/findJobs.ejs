@@ -1,0 +1,50 @@
+<%- include('./includes/header') %>
+    </head>
+
+    <body >
+        <%- include('./includes/navigation') %>
+            <div class="container-fluid border"
+                style="padding-left: 0; padding-right: 0; background-color: rgb(240, 247, 253);">
+                <div class="container-fluid border "
+                    style="margin-left: 0; margin-right: 0;  background-color: rgb(255, 255, 255);">
+                    <h1 class="title-list-job-page">Freelancer - Working remotely, reaching your full potential!</h1>
+                    <div class="intro-job" style="margin-bottom: 30px;">
+                        <a id="see-more-jobs" class="btn btn-list-job-green">Looking for works</a>
+                        <a href="/findServices" class="btn btn-list-job-white">Looking for services</a>
+                    </div>
+                </div>
+            </div>
+
+            <% if(works.length> 0) { %>
+                <% for(let i=0; i < works.length; i++) { %>
+                    <div class="container-lg" >
+                        <div class="block-content">
+                            <div class="row-fluid row-result job-contest span12 job-contest-top">
+                                <div class="fr-info span12" style="padding-bottom: 20px !important">
+                                    <h2 style="font-size: 25px;" class="fr-name block-title">
+                                        <%= works[i].title %>
+                                    </h2>
+                                    <p style="color: rgb(110, 110, 110);">
+                                        <%= works[i].hirer %>
+                                    </p>
+                                    <div class="fr-summary row-fluid fr-summary-desktop">
+                                        <div class="history span8" style="min-height: initial;padding: 10px 10px 9px">
+                                            Start | <%= works[i].start %> $
+                                        </div>
+                                    </div>
+                                    <div class="fr-service fr-service-desktop" style="color: #000;padding-top: 0">
+                                        <%= works[i].request %>
+                                        <form action="/jobDetails" method="post">
+                                            <input type="text" name="details" id="details" value="<%= works[i].details %>" style="display:  none;">
+                                            <input type="text" name="title" id="title" value="<%= works[i].title %>" style="display:  none;">
+                                            <button type="submit" class="read_more">details.</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% } %>
+                        <div style="padding-bottom: 100px;"></div>
+                            <%- include('./includes/footer')%>

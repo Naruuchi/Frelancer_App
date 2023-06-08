@@ -1,0 +1,77 @@
+<%- include('./includes/header')%>
+  <link rel="stylesheet" href="/contact.css">
+  </head>
+
+  <body>
+    <%- include('./includes/navigation') %>
+
+      <% if(service !="" ) { %>
+
+        <div class="container">
+          <div style="text-align:center">
+            <h4>
+              Service Details
+            </h4>
+            <p>Here is my service and contact infomation in details:</p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img style="pointer-events: none; user-select: none; width:100%" src="<%= service.imgURL %>">
+            </div>
+            <div class="column">
+              <h2>Full Name</h2>
+              <input type="text" id="fname" value="<%= service.fullName%>" style="pointer-events: none; user-select: none;" readonly>
+              <h2>Major</h2>
+              <input type="text" id="fname" value="<%= service.major%>" style="pointer-events: none;" readonly>
+              <h2>Certificate</h2>
+              <input type="text" id="fname" value="<%= service.certificate%>" style="pointer-events: none;" readonly>
+              <h2>Service</h2>
+              <input type="text" id="fname" value="<%= service.title%>" style="pointer-events: none;" readonly>
+              <h2>Contact</h2>
+              <input type="text" id="fname" value="<%= service.contact%>" style="pointer-events: none;" readonly>
+              <h2>Salary Expectation</h2>
+              <input type="text" id="fname" value="<%= service.salaryExpectation%>" style="pointer-events: none;" readonly>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px; resize: none; pointer-events: none; user-select: none;" 
+               readonly><%= service.description%></textarea>
+            </div>
+          </div>
+        </div>
+        <% } else { %>
+          <div class="container">
+            <div style="text-align:center">
+              <h2>Contact Us</h2>
+              <p>Swing by for a cup of coffee, or leave us a message:</p>
+            </div>
+            <div class="row">
+              <div class="column">
+                <img src="https://th.bing.com/th/id/OIP.BWnKAW-iHnlW60ngrFqNiAHaFj?pid=ImgDet&rs=1" style="width:100%">
+              </div>
+              <div class="column">
+                <form action="/action_page.php">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your first name.." >
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="vietnam">Viet Nam</option>
+                    <option value="france">France</option>
+                    <option value="england">England</option>
+                    <option value="india">India</option>
+                    <option value="japan">Japan</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="cambodia">Cambodia</option>
+                    <option value="laos">Laos</option>
+                    <option value="thailand">Thailand</option>
+                  </select>
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+            </div>
+          </div>
+          <% } %>
+            <%- include('./includes/footer') %>

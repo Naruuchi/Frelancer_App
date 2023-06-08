@@ -1,0 +1,30 @@
+<%- include('./includes/header')%>
+<link rel="stylesheet" href="/auth.css">
+</head>
+
+<body style="background-image: image-set('https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <%- include('./includes/navigation') %>
+    <table align="center" border="1" class="space">
+        <form action="/changepassword" method="POST" align="center">
+            <table align="center" border="1" class="auth__table">
+                <tr>
+                    <td colspan="2" text-align="center" class="form-title"><b>Change password</b></td>
+                </tr>
+                <tr>
+                    <td text-align="center">Old Password: </td>
+                    <td text-align="center"><input type="password" name="mk"></td>
+                </tr>
+                <tr>
+                    <td text-align="center">New Password: </td>
+                    <td text-align="center"><input type="password" name="newmk"></td>
+                </tr>
+                <tr>
+                    <td text-align="center" class="last-td">Confirm Password: </td>
+                    <td text-align="center" class="last-td"><input type="password" name="renewmk"></td>
+                </tr>
+            </table>
+            </table>
+            <button type="submit" class="btn3">Đổi Mật Khẩu</button>
+        </form>
+    </table>
+<%- include('./includes/footer')%>

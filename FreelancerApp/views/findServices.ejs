@@ -1,0 +1,53 @@
+<%- include('./includes/header') %>
+  <link rel="stylesheet" href="/main.css">
+  </head>
+
+  <body>
+    <%- include('./includes/navigation') %>
+      <div class="container-fluid border"
+        style="padding-left: 0; padding-right: 0; background-color: rgb(240, 247, 253);">
+        <div class="container-fluid border "
+          style="margin-left: 0; margin-right: 0;  background-color: rgb(255, 255, 255);">
+          <h1 class="title-list-job-page">Freelancer - Working remotely, reaching your full potential!</h1>
+          <div class="intro-job" style="margin-bottom: 30px;">
+            <a href="/findJobs" id="see-more-jobs" class="btn btn-list-job-white">Looking for works</a>
+            <a href="#" class="btn btn-list-job-green">Looking for services</a>
+          </div>
+        </div>
+
+        <% if(services.length> 0) { %>
+          <div class="row">
+            <% for(let i=0; i < services.length; i++) { %>
+              <div class="column">
+                <form action="/getServiceContact" method="post">
+                  <div class="card">
+                    <img src="<%= services[i].imgURL %>" alt="<%= services[i].fullName %>" style="width:100%">
+                    <div class="container">
+                      <h2>
+                        <%= services[i].fullName %>
+                      </h2>
+                      <p class="title">
+                        <%= services[i].major %>
+                      </p>
+                      <p>
+                        <%= services[i].title %>
+                      </p>
+                      <p class="describeText">
+                        <%= services[i].salaryExpectation %> $
+                      </p>
+                      <p>
+                        <input type="number" name="id" value="<%= services[i].id %>"
+                          style="display: none; pointer-events: none;">
+                        <input type="text" name="fullName" value="<%= services[i].fullName %>"
+                          style="display: none; pointer-events: none;">
+                        <button type="submit" class="contactbutton">Details</button>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <% } %>
+                <% } %>
+          </div>
+
+          <%- include('./includes/footer')%>

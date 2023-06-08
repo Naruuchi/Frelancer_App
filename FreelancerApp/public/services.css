@@ -1,0 +1,117 @@
+.user-Services__table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.addservice__table
+{
+    margin: 2% 0 0 40%;
+}
+
+.addservice__table input
+{
+   margin-left: 10px;
+    height: 25px;
+    width: 250px;
+}
+
+.addservice__table textarea
+{
+    margin-top: 10px;
+}
+
+.addservices__btn:hover
+{
+    background-color: whitesmoke;
+}
+
+
+.addservices__btn
+{
+    border-radius: 10%;
+    background-color: white;
+    color: black;
+    margin: 10px 0 0 40%;
+    width: 5rem;
+    height: 2rem;
+}
+
+
+.addservice__td
+{
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+b{
+    font-size: 1.1rem;
+}
+
+textarea
+{
+    resize: none;
+}
+
+.user-Services__div
+{
+    font-size: inherit;
+    width: 40em;
+    margin: 0 30%;
+}
+
+.user-Services__btn
+{
+    border-radius:.25em;
+    margin: 3.5% 0 0 39%;
+    font-size: inherit;
+    width: 8em;
+    height: 2rem;
+}
+
+.user-Services__div input {
+    width: 30%;
+    height: 40%;
+}
+
+.user-Services__btn:hover
+{
+    cursor : pointer;
+    color : black;
+    background-color: white;
+}
+
+
+.user-Services__table
+{
+    border: 1px solid black;
+    width: 92%;
+    height: 7rem;
+    margin: 2.5% 0 0 6%;
+}
+
+.user-Services__td
+{
+    text-align: center;
+    border: 1px solid black;
+    text-align: center;
+    width: 150px;
+    font-size: 10px;
+}
+
+.user-Services__disable
+{
+    display: none;
+    pointer-events: none;
+}
+
+.user-Services__disableBtn
+{
+
+    border: none;
+    background-color: white;
+}
+
+.user-Services__disableBtn :hover
+{
+    cursor: pointer;
+    color: #0c0c0c;
+}

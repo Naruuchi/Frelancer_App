@@ -1,0 +1,60 @@
+<%- include('./includes/header')%>
+<link rel="stylesheet" href="/auth.css">
+</head>
+
+<body style="background-size: cover; background-image: image-set('https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <%- include('./includes/navigation') %>
+    <table align="center" border="1">
+        <h2 align="center" class="space">Sign up to Freelancer</h2>
+        <form action="/register" method="POST" align="center">
+            <table align="center" class="auth__table">
+                <tr>
+                    <td colspan="2" text-align="center" class="form-title"><b>Sign up Info</b></td>
+                </tr>
+                <tr>
+                    <td text-align="center">UserName: </td>
+                    <td text-align="center"><input type="text" name="tk"></td>
+                </tr>
+                <tr>
+                    <td text-align="center">Password: </td>
+                    <td text-align="center"><input type="password" name="mk"></td>
+                </tr>
+                <tr >
+                    <td text-align="center" class="last-td">Confirm Password: </td>
+                    <td text-align="center" class="last-td"><input type="password" name="remk"></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <table align="center" class="auth__table">
+                <tr>
+                    <td colspan="2" text-align="center" class="form-title"><b>User Info</b></td>
+                </tr>
+                <tr>
+                    <td text-align="center">Full Name: </td>
+                    <td text-align="center"><input type="text" name="name"></td>
+                </tr> 
+                <tr>
+                    <td text-align="center">Profile Image: </td>
+                    <td text-align="center"><input type="text" name="imgURL" placeholder="image url"></td>
+                </tr>
+                <tr>
+                    <td text-align="center">Date of birth: </td>
+                    <td text-align="center"><input type="date" name="ngaysinh"></td>
+                </tr>
+                <tr>
+                    <td text-align="center">Sex:  </td>
+                    <td text-align="center" class="radio" colspan="2"><input type="text" name="sex" placeholder="male or female"></td>
+                </tr>
+                <tr>
+                    <td text-align="center" class="last-td">Email: </td>
+                    <td text-align="center" class="last-td"><input type="email" name="email"></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn2">Sign up</button>
+        </form>
+<% if (error) { %><h2 align="center" style="color: red;">The UserName is already exists, please try another one</h2> <% } %>
+<% if (fill) { %><h2 align="center" style="color: red;">Please fullfill the form!</h2> <% } %>
+
+    </table>
+<%- include('./includes/footer')%>

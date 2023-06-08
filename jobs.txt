@@ -1,0 +1,11 @@
+
+use datatest;
+insert into works (id, hirer, fullName, userName, title, details, request, start, createdAt, updatedAt) value (Default,"Jessica", "Hong Thien" ,"naruuchi", "Need some one to create a shop website", "I start a bussiness and need a website really urgent, it wouldnt be hard for the right dev","English to communicate, and deeply understand about web development", "232","2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into works (id, hirer, fullName, userName, title, details, request, start, createdAt, updatedAt) value (Default,"Hoang Long", "Hong Thien" ,"naruuchi", "Need some one join me on a team to hack the airport","Set your Name to Anonymous, put on the hacker mask, and join us.", "Have the hacker mask", "232","2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into works (id, hirer, fullName, userName, title, request, details, start, createdAt, updatedAt) value (Default,"Kha Banh", "Hong Thien" ,"naruuchi", "Need mans to join my gang","Have Mohican Cheo haircut", "Join my gang and destroy Tien Bip", "232","2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into works (id, hirer, fullName, userName, title, request, details, start, createdAt, updatedAt) value (Default,"Tiep Bip", "Hong Thien" ,"naruuchi", "Let Become Gangster","Have Mohican Cheo haircut", "Join my gang and destroy Kha Banh", "232","2023-05-15 17:14:25", "2023-05-15 17:14:25");
+
+insert into works (id, hirer, fullName, userName, title, request, details, start, createdAt, updatedAt) value (Default,"Phu Le", "Hong Thien" ,"naruuchi", "Yang Ho","Have Mohican Cheo haircut", "Join my gang and destroy Tien Bip", "232","2023-05-15 17:14:25", "2023-05-15 17:14:25");

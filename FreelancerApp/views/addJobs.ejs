@@ -1,0 +1,104 @@
+<%- include('./includes/header')%>
+    <link rel="stylesheet" href="/services.css">
+    </head>
+
+    <body>
+        <%- include('./includes/navigation')%>
+            <% if (editMode==true ) { %>
+                <form action="/update" method="POST">
+                    <table align="center" class="addservice__table">
+                        <tr>
+                            <td class="addservice__td">
+                                <b>Update Your Jobs</b>
+                            </td>
+                        </tr>
+                        <input type="number" name="id" id="id" value="<%= id %>" style="display: none;">
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="hirer"><b>Hirer: </b></label> <input value="<%= hirer %>" type="text"
+                                    name="hirer" id="hirer" placeholder="Your full Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="title"><b>Title: </b></label> <input value="<%= title %>" type="text"
+                                    name="title" id="title" placeholder="I will collect, clean data for you ...etc.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="start"><b>Start: </b></label> <input value="<%= start %>" type="text"
+                                    name="start" id="start" placeholder="Your Jobs bid start. EX: 2000">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="request"><b>Request: </b></label> <input value="<%= request %>" type="text"
+                                    name="request" id="request" placeholder="Your job requirements.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <label for="details"><b>Details: </b></label><br>
+                                <textarea name="details" id="details" cols="45" rows="5" id="description"
+                                    placeholder="Your job details"><%= details %></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="addservice__td">
+                                <button type="submit" class="addservices__btn
+                        ">POST</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <% } else { %>
+                    <form action="/addJobs" method="POST">
+                        <table align="center" class="addservice__table">
+                            <tr>
+                                <td class="addservice__td">
+                                    <b>Post Your New Jobs</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="addservice__td">
+                                    <label for="hirer"><b>Hirer: </b></label> <input type="text" name="hirer" id="hirer"
+                                        placeholder="Your full Name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="addservice__td">
+                                    <label for="title"><b>Title: </b></label> <input type="text" name="title" id="title"
+                                        placeholder="I will collect, clean data for you ...etc.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="addservice__td">
+                                    <label for="start"><b>Start: </b></label> <input type="text" name="start" id="start"
+                                        placeholder="Your Jobs bid start. EX: 2000">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="addservice__td">
+                                    <label for="request"><b>Request: </b></label> <input type="text" name="request"
+                                        id="request" placeholder="Your job requirements.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="addservice__td">
+                                    <label for="details"><b>Details: </b></label><br>
+                                    <textarea name="details" id="details" cols="45" rows="5" id="description"
+                                        placeholder="Your job details"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="addservice__td">
+                                    <button type="submit" class="addservices__btn
+                            ">POST</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <% } %>
+
+                        <%- include('./includes/footer')%>

@@ -1,0 +1,78 @@
+<%- include('./includes/header')%>
+    <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+    <%- include('./includes/navigation')%>
+    <table class="user-Services__table">
+        <tr>
+            <td class="user-Services__td" colspan="4" ><b>Posted Services</b></td>
+        </tr>
+        <tr>
+            <td class="user-Services__td" ><b>ID</b></td>
+            <td class="user-Services__td" ><b>Title</b></td>
+            <td class="user-Services__td" colspan="2"><b>Function</b></td>
+        </tr> 
+    <% if(services.length > 0) { %>
+        <% for(let i = 0; i < services.length; i++) { %>
+            <tr>
+                <td class="user-Services__td" ><b><%= services[i].id %></b></td>
+                <td class="user-Services__td" ><b><%= services[i].title %></b></td>
+                <td class="user-Services__td" >
+                    <label for="edit" class="user-Services__disableBtn">
+                        <form action="/edit" method="POST">
+                            <input type="number" name="id" value="<%= services[i].id %>" class="user-Services__disable">
+                            <button type="submit" id="edit" class="user-Services__disableBtn"><b>Edit</b></button>
+                        </form>
+                    </label>
+                </td>
+                <td class="user-Services__td" >
+                    <label for="delete" class="user-Services__disableBtn">
+                    <form action="/delete" method="POST">
+                        <input type="number" name="id" value="<%= services[i].id %>" class="user-Services__disable">
+                        <button type="submit" id="delete" class="user-Services__disableBtn"><b>Delete</b></button>
+                    </form>
+                    </label>
+                </td>
+            </tr>
+        <% } %>
+    <% } %>
+    </table>
+
+    <table class="user-Services__table">
+        <tr>
+            <td class="user-Services__td" colspan="4" ><b>Posted Jobs</b></td>
+        </tr>
+        <tr>
+            <td class="user-Services__td" ><b>ID</b></td>
+            <td class="user-Services__td" ><b>Title</b></td>
+            <td class="user-Services__td" colspan="2"><b>Function</b></td>
+        </tr>
+        <% if(works.length > 0) { %>
+            <% for(let i = 0; i < works.length; i++) { %>
+                <tr>
+                    <td class="user-Services__td" ><b><%= works[i].id %></b></td>
+                    <td class="user-Services__td" ><b><%= works[i].title %></b></td>
+                    <td class="user-Services__td" >
+                        <label for="edit" class="user-Services__disableBtn">
+                            <form action="/updateJobs" method="post">
+                            <input type="number" name="id" id="id" value="<%= works[i].id %>" style="display: none;">
+                                <button type="submit" id="edit" class="user-Services__disableBtn"><b>Edit</b></button>
+                            </form>
+                        </label>
+                    </td>
+                    <td class="user-Services__td" >
+                        <label for="delete" class="user-Services__disableBtn">
+                        <form action="/deleteJobs" method="POST">
+                            <input type="text" name="title" id="title" value="<%= works[i].title %>" style="display: none;">
+                            <input type="number" name="id" id="id" value="<%= works[i].id %>" style="display: none;">
+                            <button type="submit" id="delete" class="user-Services__disableBtn"><b>Delete</b></button>
+                        </form>
+                        </label>
+                    </td>
+                </tr>
+            <% } %>
+        <% } %>
+        </table> 
+
+<%- include('./includes/footer')%>

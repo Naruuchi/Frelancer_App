@@ -1,0 +1,33 @@
+<%- include('./includes/header')%>
+<link rel="stylesheet" href="/auth.css">
+</head>
+
+<body style=" background-size: cover;background-image: image-set('https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <%- include('./includes/navigation') %>
+    <h2 align="center" class ="space">Log in to Freelancer</h2>
+    <table>
+        <form action="/login" method="POST" align="center">
+            <table align="center" text-align='center' class="auth__table">
+                <tr>
+                    <td colspan="2" text-align="center" class="form-title"><b>Login Info</b></td>
+                </tr>
+                <tr>
+                    <td text-align="center">UserName: </td>
+                    <td text-align="center"><input type="text" name="tk"></td>
+                </tr>
+                <tr>
+                    <td text-align="center" class="last-td">Password: </td>
+                    <td text-align="center" class="last-td"><input type="password" name="mk"></td>
+                </tr>            
+            </table>
+            <button type="submit" class="btn2">Log in</button>
+        </form>
+    </table>
+    <% if (error) { %><h2 align="center" style="color: red; margin-top: 15px;">The UserName or Password you have typed is incorrect, try again.</h2> <% } %>
+    <br>
+    <hr>
+    <p align="center" style="color: whitesmoke;">Not having an account? </p>
+        <form action="/register">
+            <button type="submit" class="btn3">Sign up</button>
+        </form>
+<%- include('./includes/footer')%>
